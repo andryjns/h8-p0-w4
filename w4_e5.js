@@ -1,15 +1,12 @@
 function ubahHuruf(kata) {
 
-    var alf='abcdefghijklmnopqrstuvwxyz'
-    var newkata= []
+    var alf='abcdefghijklmnopqrstuvwxyza'
+    var newkata= ''
  
     for (var i=0; i < kata.length; i++){
-        var cari=  alf.indexOf(kata[i]) 
-        var newhuruf = alf[cari+1]
-        newkata.push(newhuruf)
+        var indeks=  alf.indexOf(kata[i]) 
+        var newkata = newkata + alf[indeks+1]       
     }
-    //console.log (newkata)
-    var newkata= newkata.join('')
     return newkata
 }
 
