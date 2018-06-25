@@ -1,4 +1,4 @@
-  function sorting(arrNumber) {
+function sorting(arrNumber) {
     arrNumber.sort()
     return arrNumber
     //console.log (arrNumber)
@@ -6,7 +6,7 @@
   
   function getTotal(arrNumber) {
     if (arrNumber.length === 0) {
-      return ''
+      return "''"
     } else {
       counter=1
       for (i= arrNumber.length-1; i>=0; i--) {
@@ -14,7 +14,7 @@
           counter++ 
         }  
       }
-      return counter
+      return 'angka paling besar adalah '+ arrNumber[arrNumber.length-1]+' dan jumlah kemunculan sebanyak '+ counter +' kali'
       //console.log (counter)
     }
   }
