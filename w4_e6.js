@@ -37,23 +37,17 @@ function hitungHuruf(kata) {
 
     // DETERMINE COUNTER TERBESAR & CARI COUNTER TSB ADALAH INDEX KEBERAPA (utk pairing dengan KATA-nya) //
 
-    var sumcount2= sumcount.slice(0)   // cloning
-    var sumcount2= sumcount2.sort()
-    //console.log (sumcount2)
-
-    if (sumcount2[sumcount2.length-1] === 0) {
-        var hasil= -1
+    if (Math.max(...sumcount) === 0) {
+        var result= -1
     }else {
-        var max= sumcount2[sumcount2.length-1]  // ambil counter terbesar (paling kanan)
-        //console.log(max)
-
-        var index= sumcount.indexOf(max)    //cari index dari counter terbesar    
+        
+        var index= sumcount.indexOf(Math.max(...sumcount))    //cari index dari counter terbesar    
         //console.log (index)   
        
-        var hasil= arr[index]            //index diketahui, bisa dipairing ke kata yg mana
+        var result= arr[index]            //index diketahui, bisa dipairing ke kata yg mana
     }  
 
-return hasil
+return result
 }
 
 
@@ -64,3 +58,4 @@ console.log(hitungHuruf('adalah gembala anak aku' )); // adalah
 console.log(hitungHuruf('rajin kaya pangkal')); // pangkal (skrg mestinya kaya)
 console.log(hitungHuruf('perahu mengayuh danau di')); // danau
 console.log(hitungHuruf('aabbcc ddeeff gghhhii jjkkll')); //gghhhii
+console.log(hitungHuruf('abc def ghi'));
