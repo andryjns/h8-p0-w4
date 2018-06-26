@@ -1,23 +1,21 @@
 function changeVocals (str) {
-  var str= str.split('')
+  var x= 'aiueoAIUEO'
+  var y= 'bjvfpBJVFP'
+  var result= ''
 
-  for (i=0; i < str.length; i++) {
-
-    switch (str[i]) {
-      case 'a': str[i]="b"; break;
-      case 'i': str[i]="j"; break;
-      case 'u': str[i]="v";break;
-      case 'e': str[i]="f";break;
-      case 'o': str[i]="p";break;
-      case 'A': str[i]="B";break;
-      case 'I': str[i]="J";break;
-      case 'U': str[i]="V";break;
-      case 'E': str[i]="F";break;
-      case 'O': str[i]="P";break;
+  for (var i=0; i<str.length; i++){
       
-    }
+      var huruf= str[i]
+      var indeks= x.indexOf(huruf)
+      var newhuruf= y[indeks]
+
+      if (newhuruf === undefined) {
+          var result = result + str[i]
+      }else {
+          var result = result + newhuruf
+      }
+
   }
-  var result= str.join('')
   return result
 }  
   
